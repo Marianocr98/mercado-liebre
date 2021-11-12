@@ -1,0 +1,302 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 12px;
+}
+
+/* Empieza header */
+
+.top-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+    align-items: center;
+}
+
+header {
+    background-color: #EAC926;
+    padding: 10px;
+}
+
+.logo {
+    padding: 10px;
+    width: 50%;
+}
+
+.form {
+    width: 50%;
+}
+
+.form input {
+    width: 80%;
+    height: 20px;
+}
+
+::-webkit-input-placeholder {
+    font-size: 10px;
+}
+
+.form button {
+    width: 15%;
+}
+
+header div.logo img {
+    width: 100%;
+}
+
+
+.copy-header {
+    font-weight: 200px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.main-navbar ul {
+    list-style: none;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: #222;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+
+div.burger-menu {
+    border: solid 1px black;
+    text-align: center;
+    background-color: #0044AA;
+    color: white;
+    width: 2rem;
+    border-radius: 20%;
+    padding: 1%;
+    margin: 10px auto 0;
+}
+
+.main-navbar {
+    display: none;
+}
+
+/* Termina el header */
+
+/*Empieza el Main*/
+
+.price {
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount,
+.description {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description {
+    color: #666;
+}
+
+.description {
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img {
+    width: 100%;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article {
+    background-color: #fff;
+    margin: 10px 0px;
+}
+
+main section article img {
+    width: 100%;
+}
+
+main section article i,
+.discount {
+    color: #39b54a;
+}
+
+
+.main-article i {
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 15%;
+    top: -15px;
+}
+
+main section h3 {
+    margin: 20px 0px;
+}
+
+article div.main-article {
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+/* Termina el Main*/
+
+/* Empieza el footer*/
+
+footer {
+    margin: 2%;
+    background-color: white;
+    text-align: center;
+}
+
+footer section article{
+    padding: 30px;
+}
+
+.titulares-footer {
+    font-size: 24px;
+    color: #666;
+}
+
+section.footer article i {
+    font-size: 2.5em;
+    color: #03264C;
+}
+
+/*Termina el footer*/
+
+/* Empieza responsive tablet*/
+
+@media (min-width: 481px) {
+    /* Header */
+    .top-header {
+        padding: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .logo {
+        padding: 10px;
+        max-width: 30%;
+    }
+    .form {
+        max-width: 30%;
+
+    }
+    .form button {
+        max-width: 20px;
+    }
+    .copy-header {
+        font-size: 80%;
+        text-align: right;
+        max-width: 350px;
+    }
+    div.burger-menu{
+        display: none;
+    }
+    .main-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-navbar ul {
+        display: flex;
+    }
+
+    .main-navbar li {
+        display: flex;
+        justify-content: space-around;
+    }
+    .main-navbar a{
+        font-size: 2.2vw;
+        margin: 0 5px;
+        display: inline;
+    }  
+    /* Header */
+
+    /* Main */
+    .products{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+    }
+    article{
+        width: 45%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .main-article {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .price, .discount{
+        width: 50%;
+    }
+    .description {
+        width: 100%;
+    }
+    main section article .description {
+        display: block;
+    }
+    /*Main*/
+
+    /*Footer*/
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer article {
+        width: 100%;
+        box-shadow: none;
+    }
+    /*Footer*/
+}
+
+@media (min-width: 769px) {
+    .products {
+        flex-wrap: nowrap;
+    }
+    article {
+        width: 22%;
+    }
+    .price, .discount {
+        width: 100%;
+        margin: 5px 0; 
+    }
+    .description {
+        margin: 5px 0;
+    }
+}
+
