@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container-form {
+    max-width: 600px;
+    margin: 50px auto 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-form input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.submit {
+    background-color: #0044AA;
+    color: #fff;
+    border: none;
+    transition: all 450ms;
+}
+
+.submit:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input::placeholder {
+    font-size: 100%;
+}
+
+@media (min-width: 481px) {
+    .container-form {
+        max-width: 432px;
+    }
+}

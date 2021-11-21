@@ -36,6 +36,10 @@ header {
     width: 50%;
 }
 
+.logo img {
+    width: 100%;
+}
+
 .form {
     width: 50%;
 }
@@ -52,11 +56,6 @@ header {
 .form button {
     width: 15%;
 }
-
-header div.logo img {
-    width: 100%;
-}
-
 
 .copy-header {
     font-weight: 200px;
@@ -97,10 +96,7 @@ div.burger-menu {
 
 /*Empieza el Main*/
 
-.price {
-    font-size: 18px;
-    width: 30%;
-}
+
 
 .discount,
 .description {
@@ -111,11 +107,6 @@ div.burger-menu {
 h3,
 .description {
     color: #666;
-}
-
-.description {
-    display: none;
-    margin-top: 20px;
 }
 
 section.banner img {
@@ -130,6 +121,8 @@ main {
 main section article {
     background-color: #fff;
     margin: 10px 0px;
+    position: relative;
+    transition: box-shadow 650ms;
 }
 
 main section article img {
@@ -160,7 +153,6 @@ main section h3 {
 }
 
 article div.main-article {
-
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -169,6 +161,22 @@ article div.main-article {
     position: relative;
     padding: 15px;
 }
+
+article div.main-article p {
+    width: 50%;
+    font-size: 18px;
+}
+
+.description {
+    margin-top: 10px;
+    display: none;
+}
+
+main section article {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 
 /* Termina el Main*/
 
@@ -255,7 +263,6 @@ section.footer article i {
     }
     article{
         width: 45%;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .main-article {
         display: flex;
@@ -267,24 +274,35 @@ section.footer article i {
     .description {
         width: 100%;
     }
-    main section article .description {
+    .description {
         display: block;
     }
+
     /*Main*/
 
     /*Footer*/
     .footer{
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
     .footer article {
-        width: 100%;
+        width: 80%;
         box-shadow: none;
+        margin: 2% auto;
+        padding: 10px;
     }
     /*Footer*/
 }
 
 @media (min-width: 769px) {
+    .top-header, .main-navbar {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .main-navbar a {
+        font-size: 18px;
+    }
+
     .products {
         flex-wrap: nowrap;
     }
@@ -298,5 +316,56 @@ section.footer article i {
     .description {
         margin: 5px 0;
     }
+
+    /* Footer */
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-footer-article {
+        width: 90%;
+        height: 200px;
+        display: flex;
+        box-shadow: none;
+        margin: 0 auto;
+        align-items: stretch;
+    }
+
+    .footer article h5 {
+        width: 100%;
+    }
+    /* Footer */
 }
 
+@media (min-width: 1280px) {
+
+    .main-article i {
+        transition: transform 650ms;
+    }
+
+    main section div.products article:hover i {
+        transform: rotate(-90deg);
+    }
+
+    article div.main-article .description {
+        width: 100%;
+        opacity: 0;
+        margin-top: 20px;
+        transition: opacity 650ms;
+    }
+
+    main section article:hover .description {
+        opacity: 1;
+    }
+
+    main section article {
+        box-shadow: none;
+    }
+
+    main section article:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
